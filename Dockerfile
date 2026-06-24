@@ -25,4 +25,4 @@ RUN uv sync --frozen --no-dev
 
 EXPOSE 8002
 
-CMD ["python", "-m", "bin.api"]
+CMD ["sh", "-c", "alembic upgrade head && python -m bin.api"]
